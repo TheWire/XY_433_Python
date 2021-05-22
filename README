@@ -1,11 +1,20 @@
-Python library for XY_433 GPIO transmitters on raspberry pi.
+Python library and script for XY_433 GPIO transmitters on raspberry pi.
 Allows sending codes to 433Mhz devices such as remote control 
 (on/off) of sockets and central heating systems.
+
 
 requires gpiozero:
 sudo apt install python3-gpiozero
 
-usage:
+
+script usage:
+python3 trans-xy.py [pin] [code]
+
+optional arguments:
+[-b --bits] [-r --repeat]
+
+
+library usage:
 from XY_433 import XY_433_trans
 
 transmitter = XY_433_trans(pin)

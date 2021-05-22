@@ -13,6 +13,8 @@ class XY_433_trans:
             self.transPin = OutputDevice(self._pin)
         except GPIOZeroError:
             print("gpio zero error on setup")
+        except PinInvalidPin:
+            print("invlaid pin number")
 
     def XY_send(self, code, bits, repeat = 3):
         for r in range(0, repeat):
